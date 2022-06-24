@@ -2,7 +2,7 @@ chat_container.innerHTML = users.map((chat, index) => {
     return `
     <div class=" row my-0 ps-2 py-2 my-2">
     <div class="col-2 py-1">
-        <img src=${chat.profile} alt="no " id=${index}   class="rounded-circle chat-img" style="height:50px;width:50px">
+        <img src=${chat.profile} alt="no " id=${index}   class="rounded-circle chat-img" style="height:40px;width:40px">
     </div>
    <div class="col-10 chat_">
 

@@ -18,7 +18,7 @@ status_container.innerHTML += shuffleusers.map((status, index) => {
     return `
     <div class="row status-box py-2 px-2 my-1">
     <div class="col-3">
-        <img src=${status.profile} id=${status.name[0]+index} alt="no " class="mt-2 rounded-circle img-fluid" style="height:70px;width: 70px;">
+        <img src=${status.profile} id=${status.name[0]+index} alt="no " class="mt-2 rounded-circle img-fluid" style="height:60px;width: 60px;">
 
 </div>
 <div class="col-8 p-0 pt-2 ">
