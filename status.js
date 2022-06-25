@@ -16,13 +16,13 @@ const statusImg = [
 ]
 status_container.innerHTML += shuffleusers.map((status, index) => {
     return `
-    <div class="row status-box py-2 px-2 my-1">
-    <div class="col-3">
-        <img src=${status.profile} id=${status.name[0]+index} alt="no " class="mt-2 rounded-circle img-fluid" style="height:50px;width: 50px;">
+    <div class="row status-box py-2 px-2 my-1 ms-1" style="gap:10px">
+    <div class="col-2  p-0">
+        <img src=${status.profile} id=${status.name[0]+index} alt="no " class="mt-2 rounded-circle p-0" style="height:50px;width: 50px;">
 
 </div>
-<div class="col-8 p-0 pt-2 ">
-    <div class="other-status-name fw-bolder fs-4">
+<div class="col-8 p-0 pt-2 m-0 ">
+    <div class="other-status-name fw-bolder" style="font-size:1rem" >
     ${status.name.length>10?status.name.slice(0,9)+"...":status.name}
     </div>
     <div class="status-time fw-bold" style="color: gray">

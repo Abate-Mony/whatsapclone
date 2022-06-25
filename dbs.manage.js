@@ -8,7 +8,7 @@ chat_container.innerHTML = users.map((chat, index) => {
 
 <div class="row">
 <div class="col-8 ps-2 ">
-<h2 class=" m-0 fs-4 overflow-hidden">${chat.name.length>10?chat.name.slice(0,9)+"...":chat.name}</h2>
+<h2 class=" m-0  overflow-hidden" style="font-size:1.2rem">${chat.name.length>10?chat.name.slice(0,9)+"...":chat.name}</h2>
 <p class=" m-0 ps-1 " style="color: gray;font-weight: 00;">call me later for here ❤</p>
 </div>
 <div class="col-4 m-0 ">

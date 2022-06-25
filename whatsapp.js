@@ -17,6 +17,10 @@ const users = [{
         profile: "./images/2.jpg",
     },
     {
+        name: "bro 🎁",
+        profile: "./statusimg/2.jpg",
+    },
+    {
         name: "mama",
         profile: "./images/3.jpg",
     },
@@ -56,6 +60,7 @@ const status_ = document.querySelector(".status-display-container")
     // const header
     // end..............................................................................
 window.addEventListener("scroll", () => {
+    hideprofilemodal()
     const window_offsetTop = window.pageYOffset;
     if (window_offsetTop >= whatsap_logo.getBoundingClientRect().height) {
         chats_ui.classList.add("position-fixed")

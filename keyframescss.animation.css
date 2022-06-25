@@ -1,0 +1,45 @@
+.animate-start {
+    animation-name: animate;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+
+/* .animate-end {
+    animation-name: animateback;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+} */
+
+@keyframes animateback {
+    from {
+        margin-top: 6rem;
+        margin-left: 10%;
+        width: 80vw;
+        height: fit-content;
+    }
+    60% {
+        border-radius: 40%;
+    }
+    to {
+        width: 50px;
+        height: 50px;
+        margin-left: 2px;
+        border-radius: 50%;
+    }
+}
+
+@keyframes animate {
+    from {
+        width: 60px;
+        height: 60px;
+    }
+    to {
+        margin-top: 6rem;
+        margin-left: 10%;
+        width: 80vw;
+        height: fit-content;
+    }
+}

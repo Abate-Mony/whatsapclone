@@ -8,31 +8,52 @@
     <title>whatsappclone</title>
     <link rel="stylesheet" href="./bootstrap.css">
     <link rel="stylesheet" href="whatsapp.css">
+    <link rel="stylesheet" href="./keyframescss.animation.css">
     <link rel="icon" href="./chef.jpg" class="rounded-circle">
     <script src="./jquery-1.4.4.min.js"></script>
 </head>
 
-<body style="height:100vh;background-color: rgb(7, 94, 84);overflow: scroll;" class="d-sm-block d-md-none d-lg-none">
+<body style="height:100vh;background-color: rgb(7, 94, 84);overflow: scroll;margin: 0;" class="d-sm-block d-md-none d-lg-none">
+    <!-- search containr -->
+    <div class="position-fixed d-none  gx-3 bg-white m-0 pb-5 search-bar" style="width:100vw;top: 0px;right: 0;z-index: 215;">
+        <div class="row">
+            <div class="col-2  d-flex justify-content-center align-items-center">
+                🎇
+            </div>
+            <div class="col-10">
+                <input type="search" class="w-100 p-2 border-0" placeholder="Search..." style="outline: none;">
+
+            </div>
+        </div>
+        <div class="row w-75 g-1 p-1 text-center">
+            <div class="col-4 btn btn-secondary rounded-pill">1</div>
+            <div class="col-4 btn btn-secondary rounded-pill">2</div>
+            <div class="col-4 btn btn-secondary rounded-pill">3</div>
+            <div class="col-4 btn btn-secondary rounded-pill">4</div>
+            <div class="col-4 btn btn-secondary rounded-pill">5</div>
+            <div class="col-4 btn btn-secondary rounded-pill">6</div>
+        </div>
+    </div>
     <!-- 
         since the modal for view profil picture is fixed 
      -->
 
-    <div class="modal-view-profile shadow-sm mt-5 border overflow-hidden position-fixed display-none" style="margin-left: 10%;width: 80vw;">
+    <div class="modal-view-profile animate-start  shadow-sm border overflow-hidden position-fixed display-none" style="z-index: 210;width: 80vw;">
         <div class="modal-name position-absolute fw-bolder py-2 fs-4 text-light m-0 px-2 bg-opacity-50 w-100 bg-dark">
             Sure
         </div>
         <img src="./images/3.jpg" alt="d" class="img-fluid w-100" style="height: 40vh;">
-        <div class="row justify-content-between text-center p-3 bg-white">
-            <div class="col-3 ">
+        <div class="row g-1 justify-content-between text-center p-3 bg-white">
+            <div class="col-2 btn btn-lg btn-outline-success">
                 1
             </div>
-            <div class="col-3">
+            <div class="col-2 btn btn-lg btn-outline-success">
                 2
             </div>
-            <div class="col-3">
+            <div class="col-2 btn btn-lg btn-outline-success">
                 3
             </div>
-            <div class="col-3 ">
+            <div class="col-2 btn btn-lg btn-outline-success">
                 4
             </div>
 
@@ -46,31 +67,35 @@
         <div class="front-page">
             <!-- whatsapp logo and search bar here -->
             <div class="row justify-content-center align-items-center m-0 whatsapp" style="background-color: rgb(7, 94, 84)">
-                <div class="col-10 ps-3">
+                <div class="col-8 ps-3">
                     <h2 class="fs-1 fw-bolder text-light">WhatsApp</h2>
                 </div>
-                <div class="col-2">
+                <div class="col-4">
                     <div class="row">
-                        <div class="h-100 search py-4 col-6 ">x</div>
-                        <div class="search col-6 py-4 ">y</div>
+                        <div class="h-100 search  col-6 py-4 " style="font-size:2rem">
+                            🔍
+                        </div>
+                        <div class="search col-6 py-4" style="font-size:2rem">
+                            📎
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- end of logo and search bar -->
             <!-- chats-ui -->
-            <div class="chats-ui text-light text-center py-2 fw-bolder text-center fs-5 w-100 text-uppercase" style="background-color: rgb(7, 94, 84)">
-                <div class="cmr py-1">
+            <div class="chats-ui text-white text-center py-2 fw-bolder text-center w-100 text-uppercase p-0" style="background-color: rgb(7, 94, 84);font-size: 1.0rem;">
+                <div>
                     cmr
                 </div>
-                <div class="chats head-chats py-1">
+                <div class="head-chats">
                     chats
                 </div>
-                <div class="status d-flex  align-items-center justify-content-center py-1">
+                <div class="d-flex  align-items-center justify-content-center py-1">
                     status
                     <div style="background-color: white;height: 10px;width: 10px;
                  " class="ms-2 rounded-circle"></div>
                 </div>
-                <div class="calls py-1">
+                <div>
                     calls
                 </div>
             </div>
@@ -125,7 +150,7 @@
             <div class=" position-fixed bottom-0 left-0 w-100  mb-2" style="z-index: 100;;width: 100vw !important;background: transparent; ">
                 <div class="row ps-0 px-2   justify-content-between" style="background: transparent; ">
                     <div class="col-9 px-2">
-                        <div class="row rounded-pill shadow bg-light p-2 border-2 d-flex justify-content-center align-items-center" style="background: transparent; ">
+                        <div class="row rounded-pill shadow bg-white p-2 border-2 d-flex justify-content-center align-items-center" style="background: transparent; ">
                             <div class="col-1 p-0">😂</div>
                             <div class="col-8 p-0">
                                 <input type="text" placeholder="Message" class="w-100 border-0 p-2" style="outline:0" id="input">
@@ -146,12 +171,12 @@
         </div>
         <!-- status container -->
         <div class="status-container  display-none text-dark bg-white px-2" style="height:100vh;background-color: rgb(28, 28, 37);overflow: scroll;overflow-x: hidden;">
-            <div class="my-status row p-1">
-                <div class="col-3">
-                    <img src="./chef.jpg " alt="no " class="mt-2 rounded-circle" style="height:70px;width: 70px;">
+            <div class="my-status row p-1 ms-1" style="gap:10px">
+                <div class="col-2">
+                    <img src="./chef.jpg " alt="no " class="mt-2 rounded-circle" style="height:50px;width: 50px;">
 
                 </div>
-                <div class="col-8 my-2  ps-1">
+                <div class="col-9 my-2  px-2">
                     <div class="mb-1 fw-bolder fs-5 text-gray ">
                         My status
                     </div>
@@ -172,7 +197,7 @@
                 </div>
                 <div class="img-container col-2">
                     <!-- <img src="./chef.jpg " alt="no " class="w-100 h-100 rounded-circle "> -->
-                    <img src="./chef.jpg " alt="no " class="mt-2 rounded-circle img-fluid" style="height:50px;width: 50px;" id="status-img">
+                    <img src="./chef.jpg " alt="no " class="mt-2 rounded-circle img-fluid p-0" style="height:40px;width: 40px;" id="status-img">
                 </div>
                 <div class="col-7 p-0 mt-1">
                     <h2 class="m-0 " id="status-name">Name</h2>
@@ -189,7 +214,7 @@
             </div>
             <div class="status-text text-center fs-5 m-3">😎😎</div>
             <div class="reply">
-                <div class="logo text-light text-center">/\</div>
+                <div class="logo text-light text-center " style="font-size: 1rem;">^</div>
                 <p class="text-center text-uppercase text-light text-bolder">reply</p>
             </div>
         </div>
