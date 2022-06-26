@@ -10,10 +10,94 @@
     <link rel="stylesheet" href="whatsapp.css">
     <link rel="stylesheet" href="./keyframescss.animation.css">
     <link rel="icon" href="./chef.jpg" class="rounded-circle">
+    <link rel="stylesheet" href="hover.css">
+    <!-- <link rel="stylesheet" href="./font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./jquery-1.4.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 </head>
 
-<body style="height:100vh;background-color: rgb(7, 94, 84);overflow: scroll;margin: 0;" class="d-sm-block d-md-none d-lg-none">
+<body style="height:100vh;background-color: rgb(7, 94, 84);overflow: scroll;margin: 0;" class="d-sm-block d-md-none d-lg-none p-0 m-0">
+
+
+
+    <!-- dropdowm -->
+    <!-- <div class="dropdown-container"> -->
+    <div class="slow options bg-white row py-2 gy-2 shadow mt-2 mx-2 position-fixed  end-0 overflow-hidden display-none" style="z-index: 250;top:1rem">
+        <div class="col-12">
+            view contact
+        </div>
+        <div class="col-12">
+            Meadi,Links, and dos
+        </div>
+        <div class="col-12">
+            Mute nofications
+        </div>
+        <div class="col-12">
+            Dissapearing messages
+        </div>
+        <div class="col-12">
+            Wallpaper
+        </div>
+        <div class="col-12 d-flex justify-content-between align-items-center" id="more">
+            More <span>></span>
+        </div>
+    </div>
+    <div class="slow bg-white display-none options row py-2 gy-2 shadow mt-2 mx-2 position-fixed top-0 end-0 overflow-hidden" style="z-index: 250;top:1rem">
+        <div class="col-12">
+            <span>Report </span>
+        </div>
+        <div class="col-12">
+            Block
+        </div>
+        <div class="col-12">
+            Clear chat
+        </div>
+        <div class="col-12">
+            Export chat
+        </div>
+        <div class="col-12">
+            Add shortcut
+        </div>
+    </div>
+    <!-- </div> -->
+    <!-- setting  -->
+    <div class="slow bg-white display-none options row  gy-2 shadow mt-2 mx-2 position-fixed top-0 end-0 overflow-hidden mt-4" style="z-index: 250;top:1rem">
+        <div class="col-12 py-2">
+            <span>New group</span>
+        </div>
+        <div class="col-12  py-2">
+            New broadcast
+        </div>
+        <div class="col-12  py-2">
+            Link devices
+        </div>
+        <div class="col-12  py-2">
+            Stares messages
+        </div>
+        <div class="col-12 pb-2  py-2">
+            Settings
+        </div>
+    </div>
+    <!-- status options -->
+    <div class="slow bg-white display-none options row  gy-2 shadow mt-2 mx-2 position-fixed top-0 end-0 overflow-hidden mt-4" style="z-index: 250;top:1rem">
+        <div class="col-12 py-2">
+            <span>Mute</span>
+        </div>
+        <div class="col-12  py-2">
+            Message
+        </div>
+        <div class="col-12  py-2">
+            Voice call
+        </div>
+        <div class="col-12  py-2">
+            Voice call
+        </div>
+        <div class="col-12 pb-2  py-2">
+            View contact
+        </div>
+    </div>
     <!-- search containr -->
     <div class="position-fixed d-none  gx-3 bg-white m-0 pb-5 search-bar" style="width:100vw;top: 0px;right: 0;z-index: 215;">
         <div class="row">
@@ -38,23 +122,26 @@
         since the modal for view profil picture is fixed 
      -->
 
-    <div class="modal-view-profile animate-start  shadow-sm border overflow-hidden position-fixed display-none" style="z-index: 210;width: 80vw;">
+    <div class="modal-view-profile animate-start opacity-100 shadow-sm border 
+    overflow-hidden position-fixed display-none" style="z-index: 210;width: 80vw;opacity:0;">
         <div class="modal-name position-absolute fw-bolder py-2 fs-4 text-light m-0 px-2 bg-opacity-50 w-100 bg-dark">
             Sure
         </div>
-        <img src="./images/3.jpg" alt="d" class="img-fluid w-100" style="height: 40vh;">
+        <img src="./images/3.jpg" alt="d" class="w-100" style="height: 40vh;">
         <div class="row g-1 justify-content-between text-center p-3 bg-white">
-            <div class="col-2 btn btn-lg btn-outline-success">
-                1
+            <div class="col-2  d-flex justify-content-center align-items-center" style="font-size:30px;color:green;transform: rotate(180deg);">
+                <!-- <i class="fa-regular fa-message-dots"></i> -->
+                <i class="fa-solid fa-message"></i>
             </div>
-            <div class="col-2 btn btn-lg btn-outline-success">
-                2
+            <div class="col-2 d-flex justify-content-center align-items-center">
+                <i class="fa fa-phone" style="font-size:30px;color:green;"></i>
             </div>
-            <div class="col-2 btn btn-lg btn-outline-success">
-                3
+            <div class="col-2 d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-video" style="font-size:30px;color:green;"></i>
             </div>
-            <div class="col-2 btn btn-lg btn-outline-success">
-                4
+            <div class="col-2  d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-circle-exclamation" style="font-size:30px;color:green;"></i>
+                <!-- <i class="fa-thin fa-circle-exclamation" style="font-size:30px;color:green;"></i> -->
             </div>
 
         </div>
@@ -66,17 +153,20 @@
     <div class="main-container " style="background-color: rgb(7, 94, 84);overflow-y: auto;overflow-x: hidden;">
         <div class="front-page">
             <!-- whatsapp logo and search bar here -->
-            <div class="row justify-content-center align-items-center m-0 whatsapp" style="background-color: rgb(7, 94, 84)">
+            <div class="row justify-content-between align-items-center m-0 whatsapp py-3" style="background-color: rgb(7, 94, 84)">
                 <div class="col-8 ps-3">
                     <h2 class="fs-1 fw-bolder text-light">WhatsApp</h2>
                 </div>
                 <div class="col-4">
                     <div class="row">
-                        <div class="h-100 search  col-6 py-4 " style="font-size:2rem">
+                        <div class="h-100 search  col-6 d-flex  text-white   justify-content-center align-items-center h-100" style="font-size:2rem">
                             🔍
                         </div>
-                        <div class="search col-6 py-4" style="font-size:2rem">
+                        <!-- <div class="search col-6 py-4" style="font-size:2rem">
                             📎
+                        </div> -->
+                        <div class="col-6 d-flex  text-white   justify-content-center align-items-center" id="settings">
+                            <i class=" fa-solid fa-ellipsis-vertical " style="font-size:2.0rem; "></i>
                         </div>
                     </div>
                 </div>
@@ -113,121 +203,145 @@
         </div>
         <div class="innerchats display-none bg-dark w-100 position-relative " style="padding-bottom: 5rem; height:100vh;overflow-x: hidden;overflow-y: auto;background-image:url(./download_.jpeg);background-repeat: no-repeat;background-size: cover;">
             <div class="chat-bar px-2 position-fixed top-0 w-100 " style="background-color: rgb(7, 94, 84);z-index: 200; ">
-                <div class="row  align-items-center">
-                    <div class="col-1 h-100 fs-4 pt-1 back-btn pb-2">
-                        🔙
+                <div class="row  align-items-center g-1">
+                    <!-- <div class="col-2 h-100 fs-4 back-btn">
+                        ⬅
+                        <<img src="./backbtn.jpg" alt="" class="w-100 h-100" style="width:100%"> 
+                    </div> -->
+                    <div class="col-1 d-flex  align-items-center back-btn ">
+
+                        <i class="fa-solid fa-arrow-left" style="font-size:25px;color:white;"></i>
                     </div>
-                    <div class="col-2 rounded-circle py-2 ps-3">
+                    <div class="col-2 rounded-circle p-0 ">
                         <img alt="no " class="rounded-circle " style="height:50px;width:50px" id="head-img">
                     </div>
-                    <div class="col-5 pt-2 fs-4 p-2 pb-3 fw-bolder text-light" id="head-name"></div>
-                    <div class="col-1 fs-4 pt-1 pb-2">☯</div>
-                    <div class="col-1 fs-4 pt-1 pb-2">☯</div>
-                    <div class="col-2 fs-4 pt-1 pb-2">☯</div>
+                    <div class="col-6 pt-2 fs-4 p-2 pb-3 fw-bolder text-light" id="head-name"></div>
+                    <!-- <div class="col-1 fs-4 pt-1 pb-2">☯</div> -->
+                    <div class="col-1 d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-video" style="font-size:20px;color:white;"></i>
+                    </div>
+                    <div class="col-1 d-flex  text-white p-2  justify-content-center">
+                        <i class="fa fa-phone" style="font-size:20px;"></i>
+                    </div>
+                    <!-- <div class="col-1 fs-4 pt-1 pb-2" id="dropdown">☯</div> -->
+                    <div class="col-1 d-flex  text-white p-2  justify-content-center" id="dropdown">
+                        <i class=" fa-solid fa-ellipsis-vertical " style="font-size:20px; "></i>
+                    </div>
                 </div>
             </div>
-            <div class="row p-0 " style="margin-top: 20%;background-color: lightgray;">
-                <div class="col-6 text-center p-1 fw-bolder text-light text-uppercase border-4 border-end border-white">block</div>
-                <div class="col-6 text-center p-1 fw-bolder text-light text-uppercase">add</div>
+            <div class="row p-0 " style="margin-top: 20%;background-color: lightgray; ">
+                <div class="col-6 text-center p-1 fw-bolder text-light text-uppercase border-4 border-end border-white ">block</div>
+                <div class="col-6 text-center p-1 fw-bolder text-light text-uppercase ">add</div>
             </div>
-            <div class="end text-center text- m-auto mb-3 mt-2 px-2 py-2 " style="background-color: rgb(247, 223, 168);width:90%;color:gray;border-radius: 15px;font-size: 0.7rem;">
+            <div class="end text-center text- m-auto mb-3 mt-2 px-2 py-2 " style="background-color: #FFEECA;width:90%;color:gray;border-radius: 15px;font-size: 0.6rem; ">
                 🔒 Messages and calls are end-to-nd encrypted. No one outside of this chat, not even WhatsApp, can read ir listen to them. Tap to learn more.
             </div>
-            <div class="message-box">
-                <div class="w-50 m-auto shadow-sm rounded-pill text-center p-2 bg-light">
+            <div class="message-box ">
+                <div class=" m-auto shadow-sm rounded-pill text-center p-2 bg-light " style="font-size: 0.6rem;width: fit-content; ">
                     December 29, 2020
                 </div>
-                <div class="chat send text-dark">good evening bro
+                <div class="chat send text-dark ">good evening 😁 <i class="fa-regular " style="font-size: 20px; "></i>
                 </div>
-                <div class="chat shadow-sm">good evening bro
+                <div class="chat shadow-sm ">good evening bro
                 </div>
-                <div class="w-50 m-auto shadow-sm rounded-pill text-center p-2 bg-light">
-                    December 31, 2020
+                <div class=" m-auto shadow-sm rounded-pill text-center p-2 bg-light " style="font-size: 0.6rem;width: fit-content; ">
+                    December 29, 2020
                 </div>
-                <div class="chat shadow-sm">good evening bro
+                <div class="chat shadow-sm ">good evening bro
                 </div>
             </div>
-            <div class=" position-fixed bottom-0 left-0 w-100  mb-2" style="z-index: 100;;width: 100vw !important;background: transparent; ">
-                <div class="row ps-0 px-2   justify-content-between" style="background: transparent; ">
-                    <div class="col-9 px-2">
-                        <div class="row rounded-pill shadow bg-white p-2 border-2 d-flex justify-content-center align-items-center" style="background: transparent; ">
-                            <div class="col-1 p-0">😂</div>
-                            <div class="col-8 p-0">
-                                <input type="text" placeholder="Message" class="w-100 border-0 p-2" style="outline:0" id="input">
+            <div class=" position-fixed bottom-0 left-0 w-100 mb-2 " style="z-index: 100;;width: 100vw !important;background: transparent; ">
+                <div class="row ps-0 px-2 justify-content-between " style="background: transparent; ">
+                    <div class="col-9 px-2 ">
+                        <div class="row rounded-pill shadow bg-white p-2 border-2 d-flex justify-content-center align-items-center " style="background: transparent; ">
+                            <div class="col-1 p-0 ">😂</div>
+                            <div class="col-8 p-0 ">
+                                <input type="text " placeholder="Message " class="w-100 border-0 p-2 " style="outline:0 " id="input">
                             </div>
-                            <div class="col-1 p-0">
-                                o
+                            <div class="col-1 p-0 text-danger ">
+                                📎
                             </div>
                             <div class="col-1 ">
                                 📸
                             </div>
                         </div>
                     </div>
-                    <div class="col-2 rounded-circle  text-center me-3 d-flex align-items-center justify-content-center" id="send-btn" style="background-color: rgb(7, 94, 84);">
+                    <div class="col-2 rounded-circle text-center me-3 d-flex align-items-center justify-content-center " id="send-btn" style="background-color: rgb(7, 94, 84); ">
                         📢
                     </div>
                 </div>
             </div>
         </div>
         <!-- status container -->
-        <div class="status-container  display-none text-dark bg-white px-2" style="height:100vh;background-color: rgb(28, 28, 37);overflow: scroll;overflow-x: hidden;">
-            <div class="my-status row p-1 ms-1" style="gap:10px">
-                <div class="col-2">
-                    <img src="./chef.jpg " alt="no " class="mt-2 rounded-circle" style="height:50px;width: 50px;">
+        <div class="status-container display-none text-dark bg-white px-2 " style="height:100vh;background-color: rgb(28, 28, 37);overflow: scroll;overflow-x: hidden; ">
+            <div class="my-status row p-1 ms-1 " style="gap:10px ">
+                <div class="col-2 ">
+                    <img src="./chef.jpg " alt="no " class="mt-2 rounded-circle " style="height:50px;width: 50px; ">
 
                 </div>
-                <div class="col-9 my-2  px-2">
+                <div class="col-9 my-2 px-2 ">
                     <div class="mb-1 fw-bolder fs-5 text-gray ">
                         My status
                     </div>
-                    <p class="fw-normal m-0" style="color: gray">Tap to add status update</p>
+                    <p class="fw-normal m-0 " style="color: gray ">Tap to add status update</p>
                 </div>
                 <div class="bold px-3 my-2 ">Recent updates</div>
             </div>
-            <div class="other-status">
+            <div class="other-status ">
             </div>
         </div>
 
         <!-- status-display -page -->
-        <div class="status-display-container bg-dark overflow-hidden position-relative display-none" style="height:100vh;">
-            <div class="p-0 my1 status-runner bg-light loader" style="height:5px;"></div>
-            <div class="status-display-header row p-2 text-light" style="height:15%">
-                <div class="col-1 py-3">
-                    🔙
-                </div>
-                <div class="img-container col-2">
-                    <!-- <img src="./chef.jpg " alt="no " class="w-100 h-100 rounded-circle "> -->
-                    <img src="./chef.jpg " alt="no " class="mt-2 rounded-circle img-fluid p-0" style="height:40px;width: 40px;" id="status-img">
-                </div>
-                <div class="col-7 p-0 mt-1">
-                    <h2 class="m-0 " id="status-name">Name</h2>
-                    <div class="updated-time m-0">yesterday</div>
-                </div>
-                <div class="col-1 opt">
-                    --
+        <div class="status-display-container bg-dark overflow-hidden position-relative display-none " style="height:100vh; ">
+            <div class="p-0 my1 status-runner bg-light loader " style="height:5px; "></div>
+            <div style="height:15% ">
+                <div class="status-display-header row p-2 text-light ">
+                    <div class="col-1 d-flex  align-items-center">
+                        <i class="fa-solid fa-arrow-left" style="font-size:25px;color:white;"></i>
+                    </div>
+                    <div class="img-container col-2 ">
+                        <img src="./chef.jpg " alt="no " class="mt-2 rounded-circle img-fluid p-0 " style="height:40px;width: 40px; " id="status-img">
+                    </div>
+                    <div class="col-7 p-0 mt-1 ">
+                        <h2 class="m-0 " id="status-name">Name</h2>
+                        <div class="updated-time m-0 ">yesterday</div>
+                    </div>
+                    <!-- <div class="col-1 opt ">
+                        --
+                    </div> -->
+                    <div class="col-1 d-flex  text-white p-2  justify-content-end" id="status-options">
+                        <i class=" fa-solid fa-ellipsis-vertical " style="font-size:20px; "></i>
+                    </div>
                 </div>
             </div>
-            <div class="text-success text-uppercase fw-bolder fs-1  status-board  d-flex justify-content-center
-             align-items-center bg-light" style="height: 62%;">
+            <div class="text-success text-uppercase fw-bolder fs-1 status-board d-flex justify-content-center align-items-center bg-light " style="height: 62%; ">
                 <!-- hello bro 😃 -->
-                <img src="./images/2.jpg" alt="" class="img-fluid h-100 border-0" id="status-display-img">
+                <img src="./images/2.jpg " alt=" " class="img-fluid h-100 border-0 " id="status-display-img">
             </div>
-            <div class="status-text text-center fs-5 m-3">😎😎</div>
-            <div class="reply">
-                <div class="logo text-light text-center " style="font-size: 1rem;">^</div>
-                <p class="text-center text-uppercase text-light text-bolder">reply</p>
+            <div class="status-text text-center fs-5 m-3 ">😎😎</div>
+            <div class="reply ">
+                <div class="logo text-light text-center ">
+                    <i class="fa-solid fa-greater-than" style="font-size: 1rem;transform: rotate(-90deg); "></i>
+                </div>
+
+                <p class="text-center text-uppercase text-light text-bolder ">reply</p>
             </div>
         </div>
 
         <!-- status-displayend -->
 
     </div>
+    <!-- camera here -->
+    <div class="cmr display-none row justify-content-center align-items-center bg-dark text-white fw-bolder overflow-hidden h-100 " style="font-size: 2rem; ">
+        camera here
+    </div>
+    <!-- end of camera -->
     <script src="whatsapp.js "></script>
-    <script src="slide.js"></script>
-    <script src="./dbs.manage.js"></script>
-    <script src="status.js"></script>
-    <script src="./addtocharts.js"></script>
-    <script src="./view.profile.js"></script>
+    <script src="slide.js "></script>
+    <script src="./dbs.manage.js "></script>
+    <script src="status.js "></script>
+    <script src="./addtocharts.js "></script>
+    <script src="./view.profile.js "></script>
 </body>
 
 </html>

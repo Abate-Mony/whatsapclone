@@ -49,6 +49,8 @@ const users = [{
         profile: "./images/workshop.jpg",
     }
 ]
+var oldValue = 0
+var newValue = 0
 const whatsap_logo = document.querySelector(".whatsapp"); //
 const chats_ui = document.querySelector(".chats-ui")
 const front_page = document.querySelector(".front-page")
@@ -70,7 +72,18 @@ window.addEventListener("scroll", () => {
         chats_ui.classList.remove("position-fixed")
         chats_ui.classList.remove("top-0")
     }
+    newValue = window.pageYOffset
+    if (oldValue < newValue) {
+        // console.log("going up")
+    } else if (oldValue > newValue) {
+        // console.log("going down")
+        chats_ui.classList.remove("position-fixed")
+        chats_ui.classList.remove("top-0")
+    }
+    oldValue = newValue
 })
+
+
 
 back_btn.onclick = function() {
     front_page.classList.remove("display-none")
@@ -91,6 +104,22 @@ Object.values(chats_ui.children).forEach(head => {
         if (head.textContent.trim() == "chats") {
             chat_page.classList.remove("display-none")
             status_container.classList.remove("display-block")
+        }
+        if (head.textContent.trim() == "cmr") {
+            front_page.classList.add("display-none")
+            status_container.classList.remove("display-block")
+            document.querySelector(".cmr").classList.remove("display-none")
+            setTimeout(() => {
+                chat_page.classList.remove("display-none")
+                front_page.classList.remove("display-none")
+                document.querySelector(".cmr").classList.add("display-none")
+                Object.values(chats_ui.children).forEach(head => {
+                    if (head.classList.contains("head-chats")) {
+                        head.classList.remove("head-chats")
+                    }
+                })
+                Object.values(chats_ui.children)[1].classList.add("head-chats")
+            }, 2000);
         }
 
     })

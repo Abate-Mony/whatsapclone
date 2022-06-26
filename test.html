@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./bootstrap.css">
     <link rel="stylesheet" href="./whatsapp.css">
+    <link rel="stylesheet" href="hover.css">
     <title>Document</title>
 </head>
 
@@ -15,32 +16,60 @@
         since the modal for view profil picture is fixed 
      -->
 
-    <div class="modal-view-profile shadow-sm m-auto mt-5 border overflow-hidden position-relative" style="width: 80vw;height: 45vh;">
-        <div class="modal-name position-absolute fw-bolder py-2 fs-4 text-light m-0 px-2 bg-opacity-50 w-100 bg-dark">
-            Sure
-        </div>
-        <img src="./images/3.jpg" alt="d" class="img-fluid w-100" style="height:80%">
-        <div class="row justify-content-between text-center pt-4 bg-white">
-            <div class="col-3 ">
-                1
-            </div>
-            <div class="col-3">
-                2
-            </div>
-            <div class="col-3">
-                3
-            </div>
-            <div class="col-3 ">
-                4
-            </div>
 
+
+    <div class="dropdown-container options  shadow mt-2 mx-2 p-0 position-absolute top-0 py-2 ps-2 pe-0 end-0 overflow-hidden w-50">
+        <div class="slow  row py-2 g-2  m-0">
+            <div class="col-12">
+                <span>view contact</span>
+            </div>
+            <div class="col-12">
+                Meadi,Links, and dos
+            </div>
+            <div class="col-12">
+                Mute nofications
+            </div>
+            <div class="col-12">
+                Dissapearing messages
+            </div>
+            <div class="col-12">
+                Wallpaper
+            </div>
+            <div class="col-12 d-flex justify-content-between align-items-center" id="more">
+                More <span>></span>
+            </div>
         </div>
+        <div class="slow display-none">
+            <div class="col-12">
+                <span>Report </span>
+            </div>
+            <div class="col-12">
+                Block
+            </div>
+            <div class="col-12">
+                Clear chat
+            </div>
+            <div class="col-12">
+                Export chat
+            </div>
+            <div class="col-12">
+                Add shortcut
+            </div>
+        </div>
+
     </div>
 
-    <!-- 
-        since the modal for view profil picture is fixed 
-     -->
-
+    <script>
+        const more = document.getElementById("more")
+        more.onclick = function() {
+            console.log(more.parentElement.nextElementSibling)
+            more.parentElement.classList.toggle("display-none")
+            more.parentElement.nextElementSibling.classList.toggle("display-none")
+                // window.addEventListener("click", () => {
+                //     more.parentElement.nextElementSibling.classList.add("display-none")
+                // }, false)
+        }
+    </script>
 </body>
 
 </html>

@@ -45,7 +45,9 @@ status_box.forEach((box, index) => {
         setTimeout(() => {
             front_page.classList.remove("display-none")
             status_.classList.add("display-none")
+                // console.log(status_.classList.contains("display-none"))
             status_container.classList.add("display-block")
+            more.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.classList.add("display-none")
         }, 4000);
     })
 })
