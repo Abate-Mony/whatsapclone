@@ -1,9 +1,25 @@
 const sendbtn = document.getElementById("send-btn")
 const messageBox = document.querySelector(".message-box")
 const input = document.getElementById("input")
-console.log(input)
 input.addEventListener("input", () => {
     navigator.vibrate([50])
+})
+
+
+function scrolldown() {
+    if (messageBox) {
+        const all = [...messageBox.children]
+        const height = all[all.length - 1].offsetTop
+        document.querySelector(".innerchats").scrollTo({
+            top: height + 30,
+            left: 0,
+            behavior: "smooth"
+        })
+    }
+
+}
+document.querySelector(".innerchats").addEventListener("scroll", (e) => {
+    console.log(document.querySelector(".innerchats").offsetHeight)
 })
 
 function addtocharts() {
@@ -18,16 +34,22 @@ function addtocharts() {
         `
 
         input.value = ""
+        scrolldown()
+
     }
 }
+$(".down").click(function(e) {
+    scrolldown()
+    e.preventDefault();
+
+});
 sendbtn.addEventListener("click", addtocharts)
 window.addEventListener("keyup", (e) => {
-        if (e.key == "Enter") {
-            addtocharts()
-        }
-    })
-    // const dropdowwContainer = document.getElementById("dropdown-container")
-    // console.log(dropdowwContainer)
+    if (e.key == "Enter") {
+        addtocharts()
+    }
+})
+
 const dropdown = document.getElementById("dropdown")
 const more = document.getElementById("more")
 more.parentElement.addEventListener("click", e => {

@@ -18,7 +18,8 @@ status_container.innerHTML += shuffleusers.map((status, index) => {
     return `
     <div class="row status-box py-2 px-2 my-1 ms-1" style="gap:10px">
     <div class="col-2  p-0">
-        <img src=${status.profile} id=${status.name[0]+index} alt="no " class="mt-2 rounded-circle p-0" style="height:50px;width: 50px;border:4px solid green">
+        <img src=${status.profile} id=${status.name[0]+index} alt="no " class="mt-2 rounded-circle p-0"
+         style="height:50px;width: 50px;border:2px solid white;box-shadow:0px 0px 2px 2px green">
 
 </div>
 <div class="col-8 p-0 pt-2 m-0 ">
@@ -26,7 +27,7 @@ status_container.innerHTML += shuffleusers.map((status, index) => {
     ${status.name.length>10?status.name.slice(0,9)+"...":status.name}
     </div>
     <div class="status-time fw-bold" style="color: gray">
-        12:00
+       Today, ${status.time}
     </div>
 </div>
 </div>

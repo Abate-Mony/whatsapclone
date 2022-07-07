@@ -13,23 +13,24 @@
     <link rel="stylesheet" href="hover.css">
     <!-- <link rel="stylesheet" href="./font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="./jquery-1.4.4.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <script src="./jquery-1.4.4.min.js"></script>
+
 </head>
 
-<body style="height:100vh;background-color: rgb(7, 94, 84);overflow: scroll;margin: 0;" class="d-sm-block d-md-none d-lg-none p-0 m-0">
-
+<body style="height:100vh;overflow: scroll;margin: 0;" class="d-sm-block d-md-none d-lg-none p-0 m-0 bg-white">
+    <div class="message-btn position-fixed rounded-circle mb-4  text-white bg-success text-center bottom-0 end-0 me-3 d-flex justify-content-center align-items-center" style="width:60px;height:60px">chats</div>
 
 
     <!-- dropdowm -->
     <!-- <div class="dropdown-container"> -->
     <div class="slow options bg-white row py-2 gy-2 shadow mt-2 mx-2 position-fixed  end-0 overflow-hidden display-none" style="z-index: 250;top:1rem">
-        <div class="col-12">
-            view contact
+        <div class="col-12 text-white">
+            <a href="./settingspage.html" class="text-decoration-none">  view contact</a>
         </div>
         <div class="col-12">
-            Meadi,Links, and dos
+            Meadi,Links, and doc
         </div>
         <div class="col-12">
             Mute nofications
@@ -77,7 +78,7 @@
             Stares messages
         </div>
         <div class="col-12 pb-2  py-2">
-            Settings
+            <a href="./settingspage.html" class="text-decoration-none text-dark">  Settings</a>
         </div>
     </div>
     <!-- status options -->
@@ -101,21 +102,21 @@
     <!-- search containr -->
     <div class="position-fixed d-none  gx-3 bg-white m-0 pb-5 search-bar" style="width:100vw;top: 0px;right: 0;z-index: 215;">
         <div class="row">
-            <div class="col-2  d-flex justify-content-center align-items-center">
-                🎇
+            <div class="col-2  d-flex justify-content-center align-items-center back-btn">
+                <i class="fa-solid fa-arrow-left" style="font-size:25px;color:black;"></i>
             </div>
             <div class="col-10">
-                <input type="search" class="w-100 p-2 border-0" placeholder="Search..." style="outline: none;">
+                <input type="search" class="w-100 p-2 border-0" placeholder="Search..." style="outline: none;" id="search-chat">
 
             </div>
         </div>
-        <div class="row w-75 g-1 p-1 text-center">
-            <div class="col-4 btn btn-secondary rounded-pill">1</div>
-            <div class="col-4 btn btn-secondary rounded-pill">2</div>
-            <div class="col-4 btn btn-secondary rounded-pill">3</div>
-            <div class="col-4 btn btn-secondary rounded-pill">4</div>
-            <div class="col-4 btn btn-secondary rounded-pill">5</div>
-            <div class="col-4 btn btn-secondary rounded-pill">6</div>
+        <div class="row w-100 g-2 p-1 text-center media">
+            <div class="col-4 btn btn-secondary rounded-pill" style="font-size:15px">[] Photos</div>
+            <div class="col-4 btn btn-secondary rounded-pill" style="font-size:15px">[] Videos</div>
+            <div class="col-4 btn btn-secondary rounded-pill" style="font-size:15px">[] Links</div>
+            <div class="col-4 btn btn-secondary rounded-pill" style="font-size:15px">[] Gifs</div>
+            <div class="col-4 btn btn-secondary rounded-pill" style="font-size:15px">[] Audio</div>
+            <div class="col-4 btn btn-secondary rounded-pill " style="font-size:15px">[] Documents</div>
         </div>
     </div>
     <!-- 
@@ -150,16 +151,19 @@
     <!-- 
         since the modal for view profil picture is fixed 
      -->
-    <div class="main-container " style="background-color: rgb(7, 94, 84);overflow-y: auto;overflow-x: hidden;">
+    <div class="main-container " style="background-color: white;overflow-y: auto;overflow-x: hidden;">
         <div class="front-page">
             <!-- whatsapp logo and search bar here -->
             <div class="row justify-content-between align-items-center m-0 whatsapp py-3" style="background-color: rgb(7, 94, 84)">
                 <div class="col-8 ps-3">
-                    <h2 class="fs-1 fw-bolder text-light">WhatsApp</h2>
+                    <h2 class="fs-1 fw-bolder text-light">
+                        <a href="./settingspage.html" class="text-decoration-none">WhatsApp</a>
+                    </h2>
                 </div>
                 <div class="col-4">
                     <div class="row">
-                        <div class="h-100 search  col-6 d-flex  text-white   justify-content-center align-items-center h-100" style="font-size:2rem">
+                        <div class="h-100 search  col-6 d-flex  text-white   justify-content-center align-items-center h-100" id="search-btn" style="font-size:2rem">
+                            <!-- <span id="search-btn">0</span> -->
                             <i class="fa-solid fa-magnifying-glass" style="font-size:2.0rem; "></i>
                         </div>
                         <!-- <div class="search col-6 py-4" style="font-size:2rem">
@@ -173,7 +177,7 @@
             </div>
             <!-- end of logo and search bar -->
             <!-- chats-ui -->
-            <div class="chats-ui text-white text-center py-2 fw-bolder text-center w-100 text-uppercase p-0" style="background-color: rgb(7, 94, 84);font-size: 1.0rem;">
+            <div class="chats-ui text-white text-center fw-bolder text-center w-100 text-uppercase p-0" style="background-color: rgb(7, 94, 84);font-size: 1.0rem;">
                 <div class="p-0 m-0">
                     <span class="invisible w-0 p-0 m-0 d-none">cmr</span>
                     <i class="fa-solid fa-camera" style="font-size:1.2rem; padding:0;margin: 0;"></i>
@@ -186,8 +190,8 @@
                     <div style="background-color: white;height: 10px;width: 10px;
                  " class="ms-2 rounded-circle"></div>
                 </div>
-                <div>
-                    calls
+                <div class="p-0 m-0">
+                    call
                 </div>
             </div>
             <!-- chats-ui -->
@@ -205,29 +209,28 @@
         <div class="innerchats display-none bg-dark w-100 position-relative " style="padding-bottom: 5rem; height:100vh;overflow-x: hidden;overflow-y: auto;background-image:url(./download_.jpeg);background-repeat: no-repeat;background-size: cover;">
             <div class="chat-bar px-2 position-fixed top-0 w-100 " style="background-color: rgb(7, 94, 84);z-index: 200; ">
                 <div class="row  align-items-center g-1 py-2">
-                    <!-- <div class="col-2 h-100 fs-4 back-btn">
-                        ⬅
-                        <<img src="./backbtn.jpg" alt="" class="w-100 h-100" style="width:100%"> 
-                    </div> -->
-                    <div class="col-1 d-flex  align-items-center back-btn ">
-
+                    <div class="col-1 d-flex  align-items-center back_btn">
                         <i class="fa-solid fa-arrow-left" style="font-size:25px;color:white;"></i>
                     </div>
                     <div class="col-2 rounded-circle p-0 ">
                         <img alt="no " class="rounded-circle " style="height:50px;width:50px" id="head-img">
                     </div>
-                    <div class="col-6 pt-2 fs-4 p-2 pb-3 fw-bolder text-light" id="head-name"></div>
-                    <!-- <div class="col-1 fs-4 pt-1 pb-2">☯</div> -->
-                    <div class="col-1 d-flex justify-content-center align-items-center">
-                        <i class="fa-solid fa-video" style="font-size:20px;color:white;"></i>
+                    <div class="col pt-2 fs-4 p-2 pb-3 fw-bolder text-light" id="head-name"></div>
+
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-video" style="font-size:20px;color:white;"></i>
+                            </div>
+                            <div class="col-4 d-flex  text-white p-2  justify-content-center">
+                                <i class="fa fa-phone" style="font-size:20px;"></i>
+                            </div>
+                            <div class="col-4 d-flex  text-white p-2  justify-content-center" id="dropdown">
+                                <i class=" fa-solid fa-ellipsis-vertical " style="font-size:20px; "></i>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-1 d-flex  text-white p-2  justify-content-center">
-                        <i class="fa fa-phone" style="font-size:20px;"></i>
-                    </div>
-                    <!-- <div class="col-1 fs-4 pt-1 pb-2" id="dropdown">☯</div> -->
-                    <div class="col-1 d-flex  text-white p-2  justify-content-center" id="dropdown">
-                        <i class=" fa-solid fa-ellipsis-vertical " style="font-size:20px; "></i>
-                    </div>
+
                 </div>
             </div>
             <div class="row p-0 " style="margin-top: 20%;background-color: lightgray; ">
@@ -237,6 +240,7 @@
             <div class="end text-center text- m-auto mb-3 mt-2 px-2 py-2 " style="background-color: #FFEECA;width:90%;color:gray;border-radius: 15px;font-size: 0.6rem; ">
                 🔒 Messages and calls are end-to-nd encrypted. No one outside of this chat, not even WhatsApp, can read ir listen to them. Tap to learn more.
             </div>
+
             <div class="message-box ">
                 <div class=" m-auto shadow-sm rounded-pill text-center p-2 bg-light " style="font-size: 0.6rem;width: fit-content; ">
                     December 29, 2020
@@ -251,13 +255,17 @@
                 <div class="chat shadow-sm ">good evening bro
                 </div>
             </div>
+
             <div class=" position-fixed bottom-0 left-0 w-100 mb-2 " style="z-index: 100;;width: 100vw !important;background: transparent; ">
-                <div class="row ps-0 px-2 justify-content-between " style="background: transparent; ">
-                    <div class="col-9 px-2 ">
-                        <div class="row rounded-pill shadow bg-white p-2 border-2 d-flex justify-content-center align-items-center " style="background: transparent; ">
+
+                <div class="row  position-relative" style="background: transparent; ">
+                    <div class="down position-absolute p-3 bg-dark top-0 rounded-circle " style="margin-top:-50px;right: 30px;width: fit-content;">
+                    </div>
+                    <div class="col-10  d-flex align-items-center justify-content-center">
+                        <div class="row rounded-pill shadow bg-white p-2 border-2 d-flex justify-content-center align-items-center  " style="background: transparent; width: 100%;">
                             <div class="col-1 p-0 ">😂</div>
-                            <div class="col-8 p-0 ">
-                                <input type="text " placeholder="Message " class="w-100 border-0 p-2 " style="outline:0 " id="input">
+                            <div class="col-9 p-0 ">
+                                <input type="text " placeholder="Message " class="w-100 border-0 p-2" style="outline:0 " id="input">
                             </div>
                             <div class="col-1 p-0 text-danger ">
                                 📎
@@ -268,21 +276,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2 rounded-circle text-center me-3 d-flex align-items-center justify-content-center " id="send-btn" style="background-color: rgb(7, 94, 84); ">
+                    <div class="col rounded-circle text-center me-3 d-flex align-items-center justify-content-center " id="send-btn" style="background-color: rgb(7, 94, 84); ">
                         <i class="fa-solid fa-microphone" style="font-size:1.3rem; padding:0;margin: 0;color:white"></i>
                     </div>
                 </div>
             </div>
         </div>
         <!-- status container -->
-        <div class="status-container display-none text-dark bg-white px-2 " style="height:100vh;background-color: rgb(28, 28, 37);overflow: scroll;overflow-x: hidden; ">
+        <div class="status-container display-none text-dark bg-white px-2 pb-4 postition-relative" style="height:100vh;background-color: rgb(28, 28, 37);overflow: scroll;overflow-x: hidden; ">
             <div class="my-status row p-1 ms-1 " style="gap:10px ">
-                <div class="col-2 ">
-                    <img src="./chef.jpg " alt="no " class="mt-2 rounded-circle " style="height:50px;width: 50px; ">
-
+                <div class="col-2 p-0 position-relative">
+                    <img src="./chef.jpg " alt="no " class="mt-2 rounded-circle " style="height:55px;width: 55px; ">
+                    <div class="position-absolute p-1 bg-success
+                     d-flex justify-content-center align-items-center end-0 me-1 mt-1 bottom-0 rounded-circle w-50 text-center
+                     h-50" style="width:fit-content;border:2px solid white">
+                        +
+                    </div>
                 </div>
                 <div class="col-9 my-2 px-2 ">
-                    <div class="mb-1 fw-bolder fs-5 text-gray ">
+                    <div class="mb-0 fw-bolder  text-gray " style="font-size: 1rem;">
                         My status
                     </div>
                     <p class="fw-normal m-0 " style="color: gray ">Tap to add status update</p>
@@ -332,18 +344,34 @@
 
         <!-- status-displayend -->
 
+
+
+
+    </div>
+
+
+
+
+
     </div>
     <!-- camera here -->
     <div class="cmr display-none row justify-content-center align-items-center bg-dark text-white fw-bolder overflow-hidden h-100 " style="font-size: 2rem; ">
         camera here
     </div>
     <!-- end of camera -->
+    <!-- call-cntainer -->
+    <div class="call-container d-none container-lg bg-white ">
+
+
+    </div>
+
     <script src="whatsapp.js "></script>
     <script src="slide.js "></script>
     <script src="./dbs.manage.js "></script>
     <script src="status.js "></script>
     <script src="./addtocharts.js "></script>
     <script src="./view.profile.js "></script>
+    <script src="search.users.js"></script>
 </body>
 
 </html>
