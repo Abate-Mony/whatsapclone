@@ -56,6 +56,18 @@
     background-size: cover;
 }
 
+
+/* 
+.message-btn::before {
+    position: absolute;
+    top: -50px;
+    left: 15x;
+    content: " ";
+    padding: 1.2rem;
+    background-color: orange;
+    border-radius: 50%;
+} */
+
 @keyframes loader {
     from {
         width: 0%

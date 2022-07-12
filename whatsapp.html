@@ -20,7 +20,9 @@
 </head>
 
 <body style="height:100vh;overflow: scroll;margin: 0;" class="d-sm-block d-md-none d-lg-none p-0 m-0 bg-white">
-    <div class="message-btn position-fixed rounded-circle mb-4  text-white bg-success text-center bottom-0 end-0 me-3 d-flex justify-content-center align-items-center" style="width:60px;height:60px">chats</div>
+    <div class="message-btn position-fixed rounded-circle mb-4 text-center
+     text-white bg-success text-center bottom-0 end-0 me-3 
+     d-flex justify-content-center align-items-center " style="width:60px;height:60px">chats</div>
 
 
     <!-- dropdowm -->
@@ -77,8 +79,9 @@
         <div class="col-12  py-2">
             Stares messages
         </div>
-        <div class="col-12 pb-2  py-2">
-            <a href="./settingspage.html" class="text-decoration-none text-dark">  Settings</a>
+        <div class="col-12 pb-2  py-2" onclick="location.href='./settingspage.html'">
+            Settings
+            <!-- <a href="./settingspage.html" class="text-decoration-none text-dark">  Settings</a> -->
         </div>
     </div>
     <!-- status options -->
@@ -130,15 +133,20 @@
         </div>
         <img src="./images/3.jpg" alt="d" class="w-100" style="height: 40vh;">
         <div class="row g-1 justify-content-between text-center p-3 bg-white">
-            <div class="col-2  d-flex justify-content-center align-items-center" style="font-size:30px;color:green;transform: rotate(180deg);">
+            <div class="col-2  d-flex justify-content-center align-items-center msg-box" style="font-size:30px;color:green;transform: rotate(180deg);">
                 <!-- <i class="fa-regular fa-message-dots"></i> -->
                 <i class="fa-solid fa-message"></i>
             </div>
             <div class="col-2 d-flex justify-content-center align-items-center">
-                <i class="fa fa-phone" style="font-size:30px;color:green;"></i>
+                <a href="./callpage.html" class="text-decoration-none">
+                    <i class="fa fa-phone" style="font-size:30px;color:green;"></i>
+                </a>
             </div>
             <div class="col-2 d-flex justify-content-center align-items-center">
-                <i class="fa-solid fa-video" style="font-size:30px;color:green;"></i>
+
+                <i class="fa-solid fa-video" style="font-size:30px;color:green;">
+                </i>
+
             </div>
             <div class="col-2  d-flex justify-content-center align-items-center">
                 <i class="fa-solid fa-circle-exclamation" style="font-size:30px;color:green;"></i>
@@ -156,8 +164,9 @@
             <!-- whatsapp logo and search bar here -->
             <div class="row justify-content-between align-items-center m-0 whatsapp py-3" style="background-color: rgb(7, 94, 84)">
                 <div class="col-8 ps-3">
-                    <h2 class="fs-1 fw-bolder text-light">
-                        <a href="./settingspage.html" class="text-decoration-none">WhatsApp</a>
+                    <h2 class="fs-1 fw-bolder text-light" onclick="location.href='./settingspage.html'">
+                        WhatsApp
+                        <!-- <a href="./settingspage.html" class="text-decoration-none">WhatsApp</a> -->
                     </h2>
                 </div>
                 <div class="col-4">
@@ -222,7 +231,7 @@
                             <div class="col-4 d-flex justify-content-center align-items-center">
                                 <i class="fa-solid fa-video" style="font-size:20px;color:white;"></i>
                             </div>
-                            <div class="col-4 d-flex  text-white p-2  justify-content-center">
+                            <div class="col-4 d-flex  text-white p-2  justify-content-center" onclick=";location.href='./callpage.html'">
                                 <i class="fa fa-phone" style="font-size:20px;"></i>
                             </div>
                             <div class="col-4 d-flex  text-white p-2  justify-content-center" id="dropdown">
@@ -305,12 +314,12 @@
             </div>
         </div>
 
-        <!-- status-display -page -->
+        <!-- status-display -page vvvvvvvv-->
         <div class="status-display-container bg-dark overflow-hidden position-relative display-none " style="height:100vh; ">
             <div class="p-0 my1 status-runner bg-light loader " style="height:5px; "></div>
             <div style="height:15% ">
                 <div class="status-display-header row p-2 text-light ">
-                    <div class="col-1 d-flex  align-items-center">
+                    <div class="col-1 d-flex  align-items-center status_back_btn">
                         <i class="fa-solid fa-arrow-left" style="font-size:25px;color:white;"></i>
                     </div>
                     <div class="img-container col-2 ">
@@ -372,6 +381,7 @@
     <script src="./addtocharts.js "></script>
     <script src="./view.profile.js "></script>
     <script src="search.users.js"></script>
+    <script src="contacts.js"></script>
 </body>
 
 </html>

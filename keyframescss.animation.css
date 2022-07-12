@@ -5,13 +5,12 @@
     animation-fill-mode: both;
 }
 
-
-/* .animate-end {
+.animate-back {
     animation-name: animateback;
     animation-duration: 1s;
     animation-direction: normal;
     animation-fill-mode: both;
-} */
+}
 
 @keyframes animateback {
     from {

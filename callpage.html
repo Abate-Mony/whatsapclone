@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="whatsapp.css">
+    <link rel="stylesheet" href="./keyframescss.animation.css">
+    <link rel="icon" href="./chef.jpg" class="rounded-circle">
+    <link rel="stylesheet" href="hover.css">
+    <!-- <link rel="stylesheet" href="./font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="./jquery-1.4.4.min.js"></script>
+    <title>call page here</title>
+</head>
+
+<body>
+    <div class="border border-3 border-danger overflow-hidden pt-5 m-0 pe-0  main" style="height:100vh;width:100vw">
+        <div class="rounded-circle  border m-auto fs-2 bg-dark mt-5 mb-5" style="width:300px;height:300px">
+        </div>
+        <p class="m-auto fw-bolder text-center fs-1 " id="name_">
+            mama
+        </p>
+        <p class="m-auto  text-center fs-1 p-2  fw-light ring">
+            calling
+        </p>
+        <div class="position-fixed rounded-top  bottom-0 w-100 p-5 border border-success border-3 fs-1 start=0">
+            <div class="row ">
+                <div class="col p-0 m-0">
+                    <div class="rounded-circle p-5 m-auto border border-success bg-primary overflow-hidden" style="width:fit-content">
+
+                    </div>
+                </div>
+
+                <div class="col p-0 m-0">
+                    <div class="rounded-circle p-5 m-auto border border-success bg-primary overflow-hidden" style="width:fit-content">
+
+                    </div>
+                </div>
+                <div class="col position-relative   text-center">
+                    <!-- <div class="position-absolute text-center border fs-1 top-0 start-50 text-danger">x</div> -->
+                    <div class="rounded-circle p-5 m-auto border border-success bg-primary overflow-hidden" style="width:fit-content">
+
+                    </div>
+                </div>
+                <div class="col p-0 m-0">
+                    <div class="rounded-circle p-5 m-auto border border-success bg-primary overflow-hidden" style="width:fit-content">
+
+                    </div>
+                </div>
+                <div class="col p-0 m-0" onclick="previousPage()">
+                    <div class="rounded-circle p-5 m-auto border border-success bg-primary overflow-hidden" style="width:fit-content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            $(".ring").text("ringing...");
+
+            $(".main").click(function(e) {
+                setInterval(() => {
+                    navigator.vibrate([500, 100, 500, 100, 500])
+                }, 1700);
+
+                e.preventDefault();
+
+            });
+        }, 2000);
+
+        function previousPage() {
+            history.go(-1)
+        }
+    </script>
+    <script src="./whatsapp.js"></script>
+    <script src="./calls.js"></script>
+</body>
+
+</html>

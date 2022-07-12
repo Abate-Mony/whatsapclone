@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whatsappclone</title>
     <link rel="stylesheet" href="./bootstrap.css">
-    <link rel="stylesheet" href="./whatsapp.css">
+    <link rel="stylesheet" href="whatsapp.css">
+    <link rel="stylesheet" href="./keyframescss.animation.css">
+    <link rel="icon" href="./chef.jpg" class="rounded-circle">
     <link rel="stylesheet" href="hover.css">
+    <!-- <link rel="stylesheet" href="./font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <script src="./jquery-1.4.4.min.js"></script>
     <title>Document</title>
 </head>
@@ -17,8 +24,10 @@
 
     <div class="container-lg setting">
         <div class="row" style="background-color: rgb(7, 94, 84);">
-            <div class=" col-2  fw-bold py-3 d-flex  align-items-center py-4">
-                <a href="./settingspage.html" class="text-decoration-none m-0 p-0">back</a>
+            <div class=" col-2  fw-bold py-3 d-flex  align-items-center py-4" onclick="history.back()">
+                <i class="fa-solid fa-arrow-left" style="font-size:25px;color:black;">-</i>
+
+                <!-- <a href="./settingspage.html" class="text-decoration-none m-0 p-0">back</a> -->
             </div>
             <div class="col fs-1  d-flex text-white align-items-center ps-2">
                 profile
@@ -26,7 +35,7 @@
         </div>
         <div class="w-100 d-flex justify-content-center align-items-center py-3">
             <div class="position-relative" style="height: 20vh;width: 20vh;">
-                <img src="./images/3.jpg" class="w-100 h-100 rounded-circle slide" alt="" id="profileImg">
+                <img src="./statusimg/11.jpg" class="w-100 h-100 rounded-circle slide" alt="" id="profileImg">
                 <div class="camera position-absolute bottom-0 end-0 
                  bg-primary p-4 rounded-circle " style="margin-right:-1px;margin-bottom:-10px;">
 
@@ -73,7 +82,9 @@
     <div class="container-fluid d-flex justify-content-center align-items-center d-none pfpg p-0" style="height: 100vh;">
 
         <div class="row position-fixed w-100 py-3 g-2 top-0 ">
-            <div class="col-2" id="backbtn">back</div>
+            <div class="col-2" id="backbtn">
+                <i class="fa-solid fa-arrow-left" style="font-size:25px;color:black;">-</i>
+            </div>
             <div class="col">prolfile picture</div>
             <div class="col-2 update">/</div>
             <div class="col-2 share">£</div>
