@@ -55,7 +55,9 @@
     outline: auto!important;
     background-size: cover;
 }
-
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
 
 /* 
 .message-btn::before {
