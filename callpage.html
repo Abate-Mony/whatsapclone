@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./keyframescss.animation.css">
     <link rel="icon" href="./chef.jpg" class="rounded-circle">
     <link rel="stylesheet" href="hover.css">
-    <!-- <link rel="stylesheet" href="./font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
@@ -16,42 +15,61 @@
 </head>
 
 <body>
-    <div class="border border-3 border-danger overflow-hidden pt-5 m-0 pe-0  main" style="height:100vh;width:100vw">
+    <div class="overflow-hidden pt-5 m-0 pe-0  main" style="height:100vh;width:100vw;background-image:url('./bg.jpg');
+    background-repeat:no-repeat;background-size: cover;">
         <div class="rounded-circle  border m-auto fs-2 bg-dark mt-5 mb-5" style="width:300px;height:300px">
+
+            <!-- <div class="img-fluid">
+
+    </div> -->
+            <img src="./images/1.jpg" alt="some" class="w-100 h-100 rounded-circle" />
+
         </div>
-        <p class="m-auto fw-bolder text-center fs-1 " id="name_">
+        <p class="m-auto fw-bolder text-center text-white " id="name_" style="font-size:3.5rem">
             mama
         </p>
-        <p class="m-auto  text-center fs-1 p-2  fw-light ring">
+        <p class="m-auto  text-center  p-2  fw-light ring text-light" style="font-size:2.5rem">
             calling
         </p>
-        <div class="position-fixed rounded-top  bottom-0 w-100 p-5 border border-success border-3 fs-1 start=0">
+        <div class="position-fixed bg-dark   bottom-0 w-100 p-5 border  fs-1 start-0 " style="border-radius:40px 40px 0px 0px">
             <div class="row ">
                 <div class="col p-0 m-0">
-                    <div class="rounded-circle p-5 m-auto border border-success bg-primary overflow-hidden" style="width:fit-content">
-
+                    <div class="rounded-circle p-5 m-auto d-flex alig-items-center
+                    justify-content-cennter overflow-hidden   text-white fw-bolder btn" style="width:fit-content">
+                        <i class="fa-solid fa-volume-low" style="font-size:60px;"></i>
+                        <!-- <i class="fa-solid fa-volume-low"></i> -->
                     </div>
                 </div>
 
                 <div class="col p-0 m-0">
-                    <div class="rounded-circle p-5 m-auto border border-success bg-primary overflow-hidden" style="width:fit-content">
+                    <div class="rounded-circle p-5 m-auto d-flex alig-items-center
+                    justify-content-cennter overflow-hidden   text-white fw-bolder btn" style="width:fit-content">
+                        <i class="fa-brands fa-bluetooth" style="font-size:60px;"></i>
 
                     </div>
                 </div>
                 <div class="col position-relative   text-center">
                     <!-- <div class="position-absolute text-center border fs-1 top-0 start-50 text-danger">x</div> -->
-                    <div class="rounded-circle p-5 m-auto border border-success bg-primary overflow-hidden" style="width:fit-content">
-
+                    <div class="rounded-circle p-5 m-auto d-flex alig-items-center
+                    justify-content-cennter overflow-hidden   text-white fw-bolder btn" style="width:fit-content">
+                        <i class="fa-solid fa-video" style="font-size:60px;"></i>
+                        <!-- <i class="fa-solid fa-video" style="font-size:30px;color:green;">
+                    </i> -->
                     </div>
                 </div>
                 <div class="col p-0 m-0">
-                    <div class="rounded-circle p-5 m-auto border border-success bg-primary overflow-hidden" style="width:fit-content">
 
+                    <div class="rounded-circle p-5 m-auto d-flex alig-items-center
+                   justify-content-cennter overflow-hidden   text-white fw-bolder btn" style="width:fit-content">
+                        <i class="fa-solid fa-microphone-slash" style="font-size:60px;"></i>
+                        <!-- <i class="fa-solid fa-microphone-slash"></i> -->
                     </div>
+
                 </div>
                 <div class="col p-0 m-0" onclick="previousPage()">
-                    <div class="rounded-circle p-5 m-auto border border-success bg-primary overflow-hidden" style="width:fit-content">
-
+                    <div class="rounded-circle p-5 m-auto d-flex alig-items-center
+                     justify-content-cennter overflow-hidden bg-danger  text-white fw-bolder btn" style="width:fit-content">
+                        <i class="fa-solid fa-phone " style="font-size:60px;transform:rotate(135deg)"></i>
                     </div>
                 </div>
             </div>
@@ -74,10 +92,11 @@
 
         function previousPage() {
             history.go(-1)
+            console.log(global_name)
         }
     </script>
-    <script src="./whatsapp.js"></script>
-    <script src="./calls.js"></script>
+    <script type="module" src="./whatsapp.js"></script>
+    <script type="module" src="./calls.js"></script>
 </body>
 
 </html>

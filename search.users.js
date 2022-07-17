@@ -3,15 +3,15 @@ const searchBar = document.getElementById("search-chat")
 $("#search-btn").click(function(e) {
     $(".search-bar").removeClass("d-none");
     $(".chats-container").addClass("mt-4");
-    e.preventDefault();
+    e.stopPropagation()
 });
 $(".position-fixed .row .back-btn").click(function(e) {
     $(".search-bar").addClass("d-none");
     $(".chats-container").removeClass("mt-4");
-    searchBar.value=""
-    display_users(users,chat_container)
-    display_status(users,status_container)
-    e.preventDefault();
+    searchBar.value = ""
+    display_users(users, chat_container)
+    display_status(users, status_container)
+    e.stopPropagation()
 });
 if (searchBar)
     searchBar.addEventListener("input", () => {
@@ -30,16 +30,16 @@ if (searchBar)
             const tab = $(".message-btn").text();
 
             if (tab == "chats") {
-                display_users(search_users,chat_container)
+                display_users(search_users, chat_container)
                 const chat_img = document.querySelectorAll(".chat-img")
                 show_profile_pic(chat_img)
             }
             if (tab == "status") {
                 const status_box = document.querySelectorAll(".status-box")
 
-                display_status(search_users,status_container)
+                display_status(search_users, status_container)
 
-             
+
             }
             if (tab == "call") {
                 call_details = ""

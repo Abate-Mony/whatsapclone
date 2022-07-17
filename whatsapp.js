@@ -96,18 +96,29 @@ var global_name = "global_name"
 
 var call_details = ""
 for (let i = 0; i < users.length - 2; ++i) {
+    var deg = null
+    var color = ""
+    if (i % 2 == 0) {
+        deg = "45"
+        color = "green"
+    } else {
+        deg = "-45"
+        color = "red"
+    }
     call_details += `
         <div class=" row my-0 ps-2 py-2 my-2 ">
         <div class="col-2 py-1">
         <img src=${users[i].profile} alt="no " id=${"img"+users[i].id}  class="rounded-circle chat-img" style="height:45px;width:45px">
         </div>
-        <div class="col-10">
+        <div class="col-10 ">
             <div class="row">
-                <div class="col-8 ps-2 ">
+                <div class="col-10 ps-3">
                     <h2 class=" m-0  overflow-hidden" style="font-size:1.2rem"> ${users[i].name.length>10?users[i].name.slice(0,9)+"...":users[i].name}</h2>
-                    <p class=" m-0 ps-1 " style="color: gray;font-weight: 00;">/ Today 18: 41</p>
+                    <p class=" m-0 ps-1 " style="color: gray;font-weight: 00;">
+                    <span><i class="fa-solid fa-arrow-left"style="transform:rotate(${deg}deg);color:${color}"></i></span> 
+                    ${i%2?"Today ,"+users[i].time:"Yesterday ,"+users[i].time}</p>
                 </div>
-                <div class="col-4 m-0 " style="font-size:1.2rem">
+                <div class="col-2 m-0 " style="font-size:1.2rem">
                 <a href="./callpage.html" class="text-decoration-none">
                 <i class="fa fa-phone" style="font-size:20px;color:green"></i> 
             </a>
@@ -145,6 +156,8 @@ if (back_btn) back_btn.addEventListener("click", function() {
     if (front_page.classList.contains("display-none") && call_container.classList.contains("d-none")) {
         call_container.classList.remove("d-none")
     }
+    global_name = "updated"
+
     // if (call_container.classList.contains("d-none")) {
     //     front_page.classList.remove("display-none")
     //     innerchats.classList.remove("display-block")
@@ -155,6 +168,7 @@ if (back_btn) back_btn.addEventListener("click", function() {
 })
 if (chats_ui) Object.values(chats_ui.children).forEach(head => {
         head.addEventListener("click", () => {
+            global_name = "updated"
             Object.values(chats_ui.children).forEach(head => {
                 if (head.classList.contains("head-chats")) {
                     head.classList.remove("head-chats")
@@ -193,7 +207,7 @@ if (chats_ui) Object.values(chats_ui.children).forEach(head => {
                 status_container.classList.remove("display-block")
                 document.querySelector(".cmr").classList.remove("display-none")
                 setTimeout(() => {
-                    $(".message-btn").removeClass("d-none");
+                    $(".messagegggggggg-btn").removeClass("d-none");
 
                     chat_page.classList.remove("display-none")
                     front_page.classList.remove("display-none")
