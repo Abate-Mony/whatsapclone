@@ -14,8 +14,9 @@ const statusImg = [
     './statusimg/jeans3.jpg',
 
 ]
-display_status(shuffleusers,status_container)
-function display_status(all_status,box){
+display_status(shuffleusers, status_container)
+
+function display_status(all_status, box) {
     // box.innerHTML=`
     // <div class="my-status row p-1 ms-1 " style="gap:10px ">
     //             <div class="col-2 p-0 position-relative">
@@ -57,8 +58,24 @@ function display_status(all_status,box){
     </div>
     `
     }).join("")
-    // document.getElementById(shuffleusers[index].name[0] + index).src
-    function hide_display_status(e){
+
+    var counter = 0
+    var time_ = 4
+    var time = null
+    const loader = document.querySelector(".loader ")
+    status_.addEventListener("touchstart", () => {
+        console.log("here")
+        loader.style.animationPlayState = "paused"
+        time = setInterval(() => {
+            time_ += 1
+        }, 1000)
+    })
+    status_.addEventListener("touchend", () => {
+        clearInterval(time)
+        loader.style.animationPlayState = "running"
+    })
+
+    function hide_display_status(e) {
         front_page.classList.remove("display-none")
         status_.classList.add("display-none")
         status_container.classList.add("display-block")
@@ -69,21 +86,27 @@ function display_status(all_status,box){
     const status_display_img = document.getElementById("status-display-img")
     status_box.forEach((box, index) => {
         box.addEventListener("click", (e) => {
-            $(".status_back_btn").click(function(e){
+            $(".status_back_btn").click(function(e) {
                 hide_display_status(e)
-        clearTimeout(timer)
+                clearTimeout(timer)
             })
-            const img_url=users[box.id].profile
-            console.log(box.id,shuffleusers[box.id].name)
+            const img_url = users[box.id].profile
             front_page.classList.add("display-none")
             status_.classList.remove("display-none")
             status_container.classList.remove("display-block")
             document.getElementById("status-img").src = img_url
             status_display_img.src = statusImg[Math.floor(Math.random() * statusImg.length)]
             document.getElementById("status-name").textContent = shuffleusers[box.id].name.length > 8 ? shuffleusers[box.id].name.slice(0, 8) + "..." : shuffleusers[box.id].name
-           let timer= setTimeout(() => {
-            hide_display_status(e)
-            }, 4000);
+
+            var test = setInterval(() => {
+                ++counter
+                if (counter == time_) {
+                    hide_display_status(e)
+                    counter = 0
+                    time_ = 4
+                    clearInterval(test)
+                }
+            }, 1000)
         })
     })
 }

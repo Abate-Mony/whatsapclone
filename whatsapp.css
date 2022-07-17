@@ -49,15 +49,18 @@
 .loader {
     animation-name: loader;
     animation-duration: 4s;
+    animation-play-state: running;
 }
 
 .outline-auto {
     outline: auto!important;
     background-size: cover;
 }
-body{
+
+body {
     font-family: 'Source Sans Pro', sans-serif;
 }
+
 
 /* 
 .message-btn::before {
